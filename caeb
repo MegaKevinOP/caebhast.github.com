@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caeb HAST | Gorras Premium</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#0b0b0f;color:#fff}
+    header{padding:18px 16px;background:#111827;position:sticky;top:0;border-bottom:1px solid #222;z-index:5}
+    .wrap{max-width:1100px;margin:0 auto}
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;letter-spacing:.6px}
+    .pill{padding:7px 11px;border:1px solid #333;border-radius:999px;background:#0b1220;font-size:13px}
+    .hero{padding:34px 16px;background:linear-gradient(135deg,#111827,#0b0b0f)}
+    h1{margin:0 0 8px;font-size:34px}
+    p{margin:0 0 14px;opacity:.9;line-height:1.5}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;padding:16px}
+    .card{background:#111827;border:1px solid #222;border-radius:14px;overflow:hidden}
+    .img{height:170px;background:#0b1220;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:13px}
+    .pad{padding:14px}
+    .title{font-weight:800;margin:0 0 6px}
+    .muted{color:#9ca3af;font-size:13px;line-height:1.35}
+    .price{font-weight:900;font-size:18px;margin:10px 0}
+    button{cursor:pointer;border:0;border-radius:10px;padding:10px 12px;font-weight:800}
+    .btn{background:#22c55e;color:#08110a;width:100%}
+    .btn2{background:#60a5fa;color:#071025}
+    .btn3{background:#fbbf24;color:#171006}
+    .section{padding:16px}
+    .box{background:#0b1220;border:1px solid #222;border-radius:14px;padding:14px}
+    input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #333;background:#0b0b0f;color:#fff}
+    label{display:block;margin:10px 0 6px;font-size:13px;color:#cbd5e1}
+    footer{padding:22px 16px;border-top:1px solid #222;opacity:.9}
+    a{color:#93c5fd}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap row">
+    <div class="brand">Caeb HAST</div>
+    <div class="row">
+      <span class="pill">🚚 Envíos</span>
+      <span class="pill">💳 Transfer / Link de pago</span>
+      <span class="pill">⭐ Calidad Premium</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Gorras con estilo, listas para vender</h1>
+    <p>Elige tu modelo, color y talla. Compra fácil por WhatsApp. Puedes editar productos, precios, fotos y características cuando quieras.</p>
+    <div class="actions">
+      <button class="btn2" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver catálogo</button>
+      <button class="btn3" onclick="document.getElementById('config').scrollIntoView({behavior:'smooth'})">Configurar pedido</button>
+    </div>
+  </div>
+</section>
+
+<div id="catalogo" class="grid">
+  <!-- PRODUCTO 1 -->
+  <div class="card">
+    <div class="img">📷 Aquí va tu foto (luego te digo cómo)</div>
+    <div class="pad">
+      <div class="title">Gorra Snapback Negra</div>
+      <div class="muted">Bordado premium • Ajustable • Visera plana</div>
+      <div class="price">$399 MXN</div>
+      <button class="btn" onclick="quickBuy('Gorra Snapback Negra','$399 MXN')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- PRODUCTO 2 -->
+  <div class="card">
+    <div class="img">📷 Aquí va tu foto</div>
+    <div class="pad">
+      <div class="title">Gorra Trucker Blanca</div>
+      <div class="muted">Malla transpirable • Ajustable • Ligera</div>
+      <div class="price">$349 MXN</div>
+      <button class="btn" onclick="quickBuy('Gorra Trucker Blanca','$349 MXN')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- PRODUCTO 3 -->
+  <div class="card">
+    <div class="img">📷 Aquí va tu foto</div>
+    <div class="pad">
+      <div class="title">Gorra Dad Hat Beige</div>
+      <div class="muted">Algodón • Visera curva • Cómoda</div>
+      <div class="price">$329 MXN</div>
+      <button class="btn" onclick="quickBuy('Gorra Dad Hat Beige','$329 MXN')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- PRODUCTO 4 -->
+  <div class="card">
+    <div class="img">📷 Aquí va tu foto</div>
+    <div class="pad">
+      <div class="title">Gorra Edición Caeb HAST</div>
+      <div class="muted">Logo Caeb HAST • Bordado • Premium</div>
+      <div class="price">$499 MXN</div>
+      <button class="btn" onclick="quickBuy('Gorra Edición Caeb HAST','$499 MXN')">Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<section id="config" class="section">
+  <div class="wrap">
+    <div class="box">
+      <h2 style="margin:0 0 10px">Configurar pedido</h2>
+      <p class="muted" style="margin-top:0">Esto genera un mensaje automático con las características para enviarlo por WhatsApp.</p>
+
+      <label>Modelo</label>
+      <select id="modelo">
+        <option>Gorra Snapback Negra</option>
+        <option>Gorra Trucker Blanca</option>
+        <option>Gorra Dad Hat Beige</option>
+        <option>Gorra Edición Caeb HAST</option>
+      </select>
+
+      <label>Color</label>
+      <select id="color">
+        <option>Negro</option>
+        <option>Blanco</option>
+        <option>Beige</option>
+        <option>Azul</option>
+        <option>Rojo</option>
+      </select>
+
+      <label>Talla</label>
+      <select id="talla">
+        <option>Ajustable (Unitalla)</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+
+      <label>Personalización (opcional)</label>
+      <input id="personal" placeholder="Ej: iniciales KC, nombre, frase, etc.">
+
+      <label>Cantidad</label>
+      <select id="cantidad">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+
+      <label>Ciudad / Envío</label>
+      <input id="ciudad" placeholder="Ej: Mazatlán, CDMX, Guadalajara…">
+
+      <div style="margin-top:12px">
+        <button class="btn" onclick="sendConfig()">Enviar pedido por WhatsApp</button>
+      </div>
+
+      <p class="muted" style="margin:12px 0 0">
+        Tip: después puedes agregar políticas de envío, devoluciones, y métodos de pago aquí mismo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>© <span id="y"></span> Caeb HAST</div>
+    <div class="muted">Hecho gratis con GitHub Pages</div>
+  </div>
+</footer>
+
+<script>
+  // ✅ CAMBIA AQUÍ TU WHATSAPP (formato: país+lada+número, sin +, sin espacios)
+  const WHATS = "5219999999999";
+
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  function waLink(text){
+    return `https://wa.me/${WHATS}?text=${encodeURIComponent(text)}`;
+  }
+
+  function quickBuy(producto, precio){
+    const msg = `Hola, quiero comprar: ${producto} (${precio}).\n\n- Color:\n- Talla:\n- Cantidad:\n- Ciudad/Envío:\n\n¿Me confirmas disponibilidad y costo de envío?`;
+    window.open(waLink(msg), "_blank");
+  }
+
+  function sendConfig(){
+    const modelo = document.getElementById("modelo").value;
+    const color = document.getElementById("color").value;
+    const talla = document.getElementById("talla").value;
+    const personal = document.getElementById("personal").value.trim();
+    const cantidad = document.getElementById("cantidad").value;
+    const ciudad = document.getElementById("ciudad").value.trim();
+
+    const msg =
+`Hola! Quiero hacer un pedido en Caeb HAST ✅
+
+Modelo: ${modelo}
+Color: ${color}
+Talla: ${talla}
+Personalización: ${personal || "No"}
+Cantidad: ${cantidad}
+Ciudad/Envío: ${ciudad || "Por definir"}
+
+¿Me confirmas total + envío y formas de pago?`;
+
+    window.open(waLink(msg), "_blank");
+  }
+</script>
+</body>
+</html> 
